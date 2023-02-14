@@ -31,7 +31,7 @@ class Moderation(commands.Cog):
     async def ban(self, ctx, member: Option(discord.Member)):
     
         await member.ban(reason=None, delete_message_days=0)#ban and dont delete any messages
-        await ctx.respond("Done.")    
+        await ctx.respond(":thumbsup:")    
 
 
     @commands.command()#Because unban doesnt work with slash commands
@@ -44,21 +44,21 @@ class Moderation(commands.Cog):
     @slash_command(guild_ids=[...])
     @commands.has_permissions(manage_roles = True)
     async def mute(self, ctx, member: Option(discord.Member)):
-        muted_role = ctx.guild.get_role(1234567890)#get the muted role with ID
+        muted_role = ctx.guild.get_role(1070180627875377223)#get the muted role with ID
     
         await member.add_roles(muted_role)#add the mute role
     
-        await ctx.respond("The member has been muted")
+        await ctx.respond(":thumbsup:")
 
 
     @slash_command(guild_ids=[...])
     @commands.has_permissions(manage_roles = True)
     async def unmute(self, ctx, member: Option(discord.Member)):
-        muted_role = ctx.guild.get_role(1234567890)
+        muted_role = ctx.guild.get_role(1070180627875377223)
     
         await member.remove_roles(muted_role)#remove muted role
     
-        await ctx.respond("The member has been unmuted")                                                   
+        await ctx.respond(":thumbsup:")                                                   
                                                  
 
     @slash_command(guild_ids=[...])
