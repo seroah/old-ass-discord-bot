@@ -1,0 +1,9 @@
+git+https://github.com/Pycord-Development/pycord
+asyncio
+youtube-dl
+pynacl
+FFmpeg
+google
+beautifulsoup4
+asyncpraw
+aiohttp
